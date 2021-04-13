@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper,total={408pt,9.0in}}
+%% Custom Page Layout Adjustments (use latex.geometry)
+\usepackage{amsmath,amssymb}
+\usepackage{pgfplots}               % loads tikz package
+\usepackage{smartdiagram}           % for a circular diagram
+\pgfplotsset{axis x line = middle,
+             axis y line = middle}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows,matrix}
+\usetikzlibrary{positioning}        % for Dave R's worksheet
+\usepackage{circuitikz}             % for Virgil P's worksheet
+\ifdefined\tikzset
+\tikzset{ampersand replacement = \amp}
+\fi
+\newcommand{\doubler}[1]{2#1}
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+\begin{document}
+\pagestyle{empty}
+\begin{tikzpicture}
+\coordinate (negative-y-axis) at (0,-2.25);
+\coordinate (positive-y-axis) at (0,2.25);
+\coordinate (negative-x-axis) at (-2.625,0);
+\coordinate (positive-x-axis) at (2.625,0);
+\coordinate (origin) at (0,0);
+
+\pgfmathsetmacro{\pointsize}{0.09}
+
+
+\coordinate (zero)  at (0:1.5);
+\coordinate (one)   at (45:1.5);
+\coordinate (two)   at (90:1.5);
+\coordinate (three) at (135:1.5);
+\coordinate (four)  at (180:1.5);
+\coordinate (five)  at (225:1.5);
+\coordinate (six)   at (270:1.5);
+\coordinate (seven) at (315:1.5);
+
+\special{dvisvgm:raw <g class="PTX-group">}
+    
+    \special{dvisvgm:raw <g id="group-2" class="PTX-group" style="visibility:hidden;">}\special{dvisvgm:raw <set attributeName="visibility" attributeType="CSS" to="visible" begin="0.5s" dur="1s" fill="freeze"/>}
+        
+        \draw [->]  (negative-x-axis) -- (positive-x-axis);
+        \node [above=4pt] at (positive-x-axis) {\(x\)};
+    \special{dvisvgm:raw </g>}
+
+    \special{dvisvgm:raw <g id="group-3" class="PTX-group" style="visibility:hidden;">}\special{dvisvgm:raw <set attributeName="visibility" attributeType="CSS" to="visible" begin="1.5s" dur="1s" fill="freeze"/>}
+        
+        \draw [->]  (negative-y-axis) -- (positive-y-axis);
+        \node [above=4pt] at (positive-y-axis) {\(y\)};
+    \special{dvisvgm:raw </g>}
+\special{dvisvgm:raw </g>}
+
+\special{dvisvgm:raw <g id="group-4" class="PTX-group" style="visibility:hidden;">}\special{dvisvgm:raw <set attributeName="visibility" attributeType="CSS" to="visible" begin="2.5s" dur="1s" fill="freeze"/>}
+    
+    \draw (origin) circle (1.5);
+    \node [below right=4pt] at (origin) {\(0\)};
+\special{dvisvgm:raw </g>}
+
+\special{dvisvgm:raw <g class="PTX-group">}
+    
+    \special{dvisvgm:raw <g id="group-6" class="PTX-group" style="visibility:hidden;">}\special{dvisvgm:raw <set attributeName="visibility" attributeType="CSS" to="visible" begin="3.5s" dur="1s" fill="freeze"/>}
+        
+        \filldraw[fill=black, draw=black] (zero)   circle (\pointsize);
+        \node [below right=4pt] at (zero) {\(1\)};
+    \special{dvisvgm:raw </g>}
+
+    \special{dvisvgm:raw <g id="group-7" class="PTX-group" style="visibility:hidden;">}\special{dvisvgm:raw <set attributeName="visibility" attributeType="CSS" to="visible" begin="4.5s" dur="1s" fill="freeze"/>}
+        
+        \filldraw[fill=black, draw=black] (one)    circle (\pointsize);
+        \node [above right=4pt] at (one) {\(\omega\)};
+    \special{dvisvgm:raw </g>}
+
+    \special{dvisvgm:raw <g id="group-8" class="PTX-group" style="visibility:hidden;">}\special{dvisvgm:raw <set attributeName="visibility" attributeType="CSS" to="visible" begin="5.5s" dur="1s" fill="freeze"/>}
+        
+        \filldraw[fill=black, draw=black] (two)    circle (\pointsize);
+        \node [above right=4pt] at (two) {\(i\)};
+    \special{dvisvgm:raw </g>}
+
+    \special{dvisvgm:raw <g id="group-9" class="PTX-group" style="visibility:hidden;">}\special{dvisvgm:raw <set attributeName="visibility" attributeType="CSS" to="visible" begin="6.5s" dur="1s" fill="freeze"/>}
+        
+        \filldraw[fill=black, draw=black] (three)  circle (\pointsize);
+        \node [above left=4pt] at (three) {\(\omega^3\)};
+    \special{dvisvgm:raw </g>}
+
+    \special{dvisvgm:raw <g id="group-10" class="PTX-group" style="visibility:hidden;">}\special{dvisvgm:raw <set attributeName="visibility" attributeType="CSS" to="visible" begin="7.5s" dur="1s" fill="freeze"/>}
+        
+        \filldraw[fill=black, draw=black] (four)    circle (\pointsize);
+        \node [below left=4pt] at (four) {\(-1\)};
+    \special{dvisvgm:raw </g>}
+
+    \special{dvisvgm:raw <g id="group-11" class="PTX-group" style="visibility:hidden;">}\special{dvisvgm:raw <set attributeName="visibility" attributeType="CSS" to="visible" begin="8.5s" dur="1s" fill="freeze"/>}
+        
+        \filldraw[fill=black, draw=black] (five)   circle (\pointsize);
+        \node [below left=4pt] at (five) {\(\omega^5\)};
+    \special{dvisvgm:raw </g>}
+
+    \special{dvisvgm:raw <g id="group-12" class="PTX-group" style="visibility:hidden;">}\special{dvisvgm:raw <set attributeName="visibility" attributeType="CSS" to="visible" begin="9.5s" dur="1s" fill="freeze"/>}
+        
+        \filldraw[fill=black, draw=black] (six)    circle (\pointsize);
+        \node [below right=4pt] at (six) {\(-i\)};
+    \special{dvisvgm:raw </g>}
+
+    \special{dvisvgm:raw <g id="group-13" class="PTX-group" style="visibility:hidden;">}\special{dvisvgm:raw <set attributeName="visibility" attributeType="CSS" to="visible" begin="10.5s" dur="1s" fill="freeze"/>}
+        
+        \filldraw[fill=black, draw=black] (seven)  circle (\pointsize);
+        \node [below right=4pt] at (seven) {\(\omega^7\)};
+    \special{dvisvgm:raw </g>}
+\special{dvisvgm:raw </g>}
+\end{tikzpicture}
+\end{document}
