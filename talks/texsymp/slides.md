@@ -49,27 +49,23 @@ Progressive Accessiblity Solutions
 * [MathJax](https://mathjax.org) is a JavaScript library for rendering Mathematics in all browsers
 * **MathJax IS NOT MathML!** Takes LaTeX, AsciiMath, MathML
 * Generates browser output, e.g. HTML/CSS, SVG
-* De facto rendering solution of (nearly) all Mathematics on the web
-* Can be run fully serverside
+* De facto rendering solution for most Mathematics on the web
+* Can also be run fully serverside
 * Provides accessibility extension
 
 ## Accessibility with Speech Rule Engine
 
 * MathJax's Accessibility extension provided
   by [Speech Rule Engine](https://speechruleengine.org)
-* 
-
-Math rendered with MathJax is pretty much accessible out of the box
-
-## Compute Speech
+* [Open source library](https://github.com/zorkow/speech-rule-engine){target="_blank"}
+  for translating Math to speech
+* Initially implemented in the context of ChromeVox
+* Only Math speech solution in JavaScript
+* Speech solution for: ChromeVox, MathJax, EquatIO, MathLive, ...
+* Runs in browser, command line, as node module.
 
 * Enrich Math using [Speech Rule Engine](https://speechruleengine.org){target="_blank"}
-* Javascript library for translating XML into Speech (markup)
-* Open source library [available at github](https://github.com/zorkow/speech-rule-engine){target="_blank"}
-* Only Math speech solution in JavaScript
-* Runs in browser, command line, as node module.
-* Initially implemented in the context of ChromeVox
-* Speech solution for: ChromeVox, MathJax, EquatIO, MathLive, ...
+* 
 
 
 ## Example: Interactivity and Screenreading
@@ -78,9 +74,8 @@ Math rendered with MathJax is pretty much accessible out of the box
 $$
    x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
 $$
-* Source in LaTeX
 * Rendered with MathJax
-  * Javascript library for rendering LaTeX, AsciiMath, MathML in all browsers
+  * Source in LaTeX
   * One extra line of HTML
 * Accessibility "built-in"
 
@@ -88,37 +83,11 @@ $$
 :::
 
 
-## Alternative Formats for Math
-
-* Tactile output, Abstraction, Summaries
-  $$ \vec{\nabla} \times \vec{F} =
-            \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i}
-          + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j}
-          + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k}
-   $${#braille}
-:::Standalone Click or focus on the formula and press <kbd>ENTER</kbd> to start, <kbd>Escape</kbd> to quit.
-:::
-
-Other Formats:{.left}
-* General E-books, Epub3, etc.
-* 3D printing and embossing
-* Fulltext translation to Braille, e.g., [PreText to Nemeth](https://pretextbook.org/)
-* But also computational elements for JupyterLab, Sage, R, Maple, MatLab
-* Subtitling, e.g., via [automatic text generation](https://mathjax.github.io/MathJax-demos-web/speech-generator/convert-with-speech.html)
-
-
 ## Semantics
 
 * Accessibility requires one or multiple alternative views
-* Achieve this by adding semantic layers
-* For regular text semantics is quite straight forward
-* Semantics for math is quite different from its syntax
-* In particular navigation has to be meaningful
-
-
-## Generate Semantics
-
 * Math markup (e.g., LaTeX, MathML) are not very expressive
+* SRE generates Semantics annotations automatically
 
 
 ```LaTeX
@@ -155,6 +124,25 @@ Other Formats:{.left}
   <mo>=</mo><mn>0</mn></math>
 ```
 internally into [semantically improved term structure](https://zorkow.github.io/semantic-tree-visualiser/visualise.html?310000111100%3Cmath%3E%0A%20%20%3Cmi%3Ea%3C/mi%3E%0A%20%20%3Cmsup%3E%0A%20%20%20%20%3Cmi%3Ex%3C/mi%3E%0A%20%20%20%20%3Cmn%3E2%3C/mn%3E%0A%20%20%3C/msup%3E%0A%20%20%3Cmo%3E+%3C/mo%3E%0A%20%20%3Cmi%3Eb%3C/mi%3E%0A%20%20%3Cmi%3Ex%3C/mi%3E%0A%20%20%3Cmo%3E+%3C/mo%3E%0A%20%20%3Cmi%3Ec%3C/mi%3E%0A%20%20%3Cmo%3E%3D%3C/mo%3E%0A%20%20%3Cmn%3E0%3C/mn%3E%0A%3C/math%3E)
+
+
+## Alternative Formats for Math
+
+* Tactile output, Abstraction, Summaries
+  $$ \vec{\nabla} \times \vec{F} =
+            \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i}
+          + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j}
+          + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k}
+   $${#braille}
+:::Standalone Click or focus on the formula and press <kbd>ENTER</kbd> to start, <kbd>Escape</kbd> to quit.
+:::
+
+Other Formats:{.left}
+* General E-books, Epub3, etc.
+* 3D printing and embossing
+* Fulltext translation to Braille, e.g., [PreText to Nemeth](https://pretextbook.org/)
+* But also computational elements for JupyterLab, Sage, R, Maple, MatLab
+* Subtitling, e.g., via [automatic text generation](https://mathjax.github.io/MathJax-demos-web/speech-generator/convert-with-speech.html)
 
 
 ## What about Diagrams

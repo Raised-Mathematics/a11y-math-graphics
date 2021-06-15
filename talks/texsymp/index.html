@@ -46,89 +46,69 @@ Maths and Accessibility
 
 </div>
 
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span></div></section>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span></div></section>
 <section id="slide2">
 <h2>What is MathJax</h2>
 <ul>
 <li><a target="_blank" rel="noopener"href="https://mathjax.org">MathJax</a> is a JavaScript library for rendering Mathematics in all browsers</li>
 <li><strong>MathJax IS NOT MathML!</strong> Takes LaTeX, AsciiMath, MathML</li>
 <li>Generates browser output, e.g. HTML/CSS, SVG</li>
-<li>De facto rendering solution of (nearly) all Mathematics on the web</li>
-<li>Can be run fully serverside</li>
+<li>De facto rendering solution for most Mathematics on the web</li>
+<li>Can also be run fully serverside</li>
 <li>Provides accessibility extension</li>
 </ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span></div></section>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span></div></section>
 <section id="slide3">
 <h2>Accessibility with Speech Rule Engine</h2>
 <ul>
-<li>MathJax's Accessibility extension provided
-by <a target="_blank" rel="noopener"href="https://speechruleengine.org">Speech Rule Engine</a></li>
+<li>
+<p>MathJax's Accessibility extension provided
+by <a target="_blank" rel="noopener"href="https://speechruleengine.org">Speech Rule Engine</a></p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener"href="https://github.com/zorkow/speech-rule-engine" target="_blank">Open source library</a>
+for translating Math to speech</p>
+</li>
+<li>
+<p>Initially implemented in the context of ChromeVox</p>
+</li>
+<li>
+<p>Only Math speech solution in JavaScript</p>
+</li>
+<li>
+<p>Speech solution for: ChromeVox, MathJax, EquatIO, MathLive, ...</p>
+</li>
+<li>
+<p>Runs in browser, command line, as node module.</p>
+</li>
+<li>
+<p>Enrich Math using <a target="_blank" rel="noopener"href="https://speechruleengine.org" target="_blank">Speech Rule Engine</a></p>
+</li>
 <li></li>
 </ul>
-<p>Math rendered with MathJax is pretty much accessible out of the box</p>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span></div></section>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span></div></section>
 <section id="slide4">
-<h2>Compute Speech</h2>
-<ul>
-<li>Enrich Math using <a target="_blank" rel="noopener"href="https://speechruleengine.org" target="_blank">Speech Rule Engine</a></li>
-<li>Javascript library for translating XML into Speech (markup)</li>
-<li>Open source library <a target="_blank" rel="noopener"href="https://github.com/zorkow/speech-rule-engine" target="_blank">available at github</a></li>
-<li>Only Math speech solution in JavaScript</li>
-<li>Runs in browser, command line, as node module.</li>
-<li>Initially implemented in the context of ChromeVox</li>
-<li>Speech solution for: ChromeVox, MathJax, EquatIO, MathLive, ...</li>
-</ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span></div></section>
-<section id="slide5">
 <h2>Example: Interactivity and Screenreading</h2>
 <ul>
 <li>Listen to the quadratic formula
 $$
 x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
 $$</li>
-<li>Source in LaTeX</li>
 <li>Rendered with MathJax
 <ul>
-<li>Javascript library for rendering LaTeX, AsciiMath, MathML in all browsers</li>
+<li>Source in LaTeX</li>
 <li>One extra line of HTML</li>
 </ul>
 </li>
 <li>Accessibility &quot;built-in&quot;</li>
 </ul>
-<div><small>Click or focus on the formula and press <kbd>ENTER</kbd> to start, <kbd>Escape</kbd> to quit.</small></div><div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span></div></section>
-<section id="slide6">
-<h2>Alternative Formats for Math</h2>
-<ul>
-<li id="braille">Tactile output, Abstraction, Summaries
-$$ \vec{\nabla} \times \vec{F} =
-\left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i}
-+ \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j}
-+ \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k}
-$$</li>
-</ul>
-<div><small>Click or focus on the formula and press <kbd>ENTER</kbd> to start, <kbd>Escape</kbd> to quit.</small></div><p class="left">Other Formats:</p>
-<ul>
-<li>General E-books, Epub3, etc.</li>
-<li>3D printing and embossing</li>
-<li>Fulltext translation to Braille, e.g., <a target="_blank" rel="noopener"href="https://pretextbook.org/">PreText to Nemeth</a></li>
-<li>But also computational elements for JupyterLab, Sage, R, Maple, MatLab</li>
-<li>Subtitling, e.g., via <a target="_blank" rel="noopener"href="https://mathjax.github.io/MathJax-demos-web/speech-generator/convert-with-speech.html">automatic text generation</a></li>
-</ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span></div></section>
-<section id="slide7">
+<div><small>Click or focus on the formula and press <kbd>ENTER</kbd> to start, <kbd>Escape</kbd> to quit.</small></div><div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span></div></section>
+<section id="slide5">
 <h2>Semantics</h2>
 <ul>
 <li>Accessibility requires one or multiple alternative views</li>
-<li>Achieve this by adding semantic layers</li>
-<li>For regular text semantics is quite straight forward</li>
-<li>Semantics for math is quite different from its syntax</li>
-<li>In particular navigation has to be meaningful</li>
-</ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span></div></section>
-<section id="slide8">
-<h2>Generate Semantics</h2>
-<ul>
 <li>Math markup (e.g., LaTeX, MathML) are not very expressive</li>
+<li>SRE generates Semantics annotations automatically</li>
 </ul>
 <pre><code class="language-LaTeX">    ax^2+bx+c=0
 </code></pre>
@@ -147,8 +127,8 @@ $$</li>
   &lt;mn&gt;0&lt;/mn&gt;
 &lt;/math&gt;
 </code></pre>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span></div></section>
-<section id="slide9">
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span></div></section>
+<section id="slide6">
 <h2>Embedding Semantics</h2>
 <ul>
 <li>SRE reinterprets the syntax</li>
@@ -162,8 +142,27 @@ $$</li>
   &lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt;
 </code></pre>
 <p>internally into <a target="_blank" rel="noopener"href="https://zorkow.github.io/semantic-tree-visualiser/visualise.html?310000111100%3Cmath%3E%0A%20%20%3Cmi%3Ea%3C/mi%3E%0A%20%20%3Cmsup%3E%0A%20%20%20%20%3Cmi%3Ex%3C/mi%3E%0A%20%20%20%20%3Cmn%3E2%3C/mn%3E%0A%20%20%3C/msup%3E%0A%20%20%3Cmo%3E+%3C/mo%3E%0A%20%20%3Cmi%3Eb%3C/mi%3E%0A%20%20%3Cmi%3Ex%3C/mi%3E%0A%20%20%3Cmo%3E+%3C/mo%3E%0A%20%20%3Cmi%3Ec%3C/mi%3E%0A%20%20%3Cmo%3E%3D%3C/mo%3E%0A%20%20%3Cmn%3E0%3C/mn%3E%0A%3C/math%3E">semantically improved term structure</a></p>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span></div></section>
-<section id="slide10">
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span></div></section>
+<section id="slide7">
+<h2>Alternative Formats for Math</h2>
+<ul>
+<li id="braille">Tactile output, Abstraction, Summaries
+$$ \vec{\nabla} \times \vec{F} =
+\left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i}
++ \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j}
++ \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k}
+$$</li>
+</ul>
+<div><small>Click or focus on the formula and press <kbd>ENTER</kbd> to start, <kbd>Escape</kbd> to quit.</small></div><p class="left">Other Formats:</p>
+<ul>
+<li>General E-books, Epub3, etc.</li>
+<li>3D printing and embossing</li>
+<li>Fulltext translation to Braille, e.g., <a target="_blank" rel="noopener"href="https://pretextbook.org/">PreText to Nemeth</a></li>
+<li>But also computational elements for JupyterLab, Sage, R, Maple, MatLab</li>
+<li>Subtitling, e.g., via <a target="_blank" rel="noopener"href="https://mathjax.github.io/MathJax-demos-web/speech-generator/convert-with-speech.html">automatic text generation</a></li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span></div></section>
+<section id="slide8">
 <h2>What about Diagrams</h2>
 <ul>
 <li>Diagrams can be handled very similarly</li>
@@ -179,13 +178,13 @@ $$</li>
 </ul>
 </li>
 </ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span></div></section>
-<section id="slide11">
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span></div></section>
+<section id="slide9">
 <h2>Conclusions</h2>
 <ul>
 <li><strong>Do not consider this a PDF Accessibility Problem only!</strong></li>
 </ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span></div></section>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span></div></section>
 
 </div>
 </body>
