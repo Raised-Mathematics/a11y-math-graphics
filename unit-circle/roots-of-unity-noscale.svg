@@ -49,7 +49,7 @@
     </g>
     <g class='PTX-group' id='group-4' style='visibility:hidden;'>
       <set attributeName='visibility' attributeType='CSS' begin='0s' dur='0s' fill='freeze' to='visible'/>
-      <path d='M165.4492 68.839846C165.4492 45.3555 146.4141 26.3203 122.929687 26.3203C99.4453 26.3203 80.4102 45.3555 80.4102 68.839846C80.4102 92.3242 99.4453 111.3594 122.929687 111.3594C146.4141 111.3594 165.4492 92.3242 165.4492 68.839846Z' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
+      <path d='M165.4492 68.839846C165.4492 45.3555 146.4141 26.3203 122.929687 26.3203C99.4453 26.3203 80.4102 45.3555 80.4102 68.839846C80.4102 92.3242 99.4453 111.3594 122.929687 111.3594C146.4141 111.3594 165.4492 92.3242 165.4492 68.839846Z' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10' style=" fill:none;"/>
       <text class='f3' x='122.929776' y='68.83887' transform='matrix(1 0 0 1 6.919 14.6233)'>0</text>
     </g>
     <g class='PTX-group'>
