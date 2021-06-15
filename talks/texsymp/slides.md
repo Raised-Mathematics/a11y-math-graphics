@@ -30,13 +30,13 @@ University of Birmingham, UK
 
 :::Affiliation
 MathJax Consortium
-![MathJax Logo](../resources/logos/badge-square2.png)
+![MathJax Logo](./resources/logos/badge-square2.png)
 [mathjax.org](https://mathjax.org)
 :::
 
 :::Affiliation
 Progressive Accessiblity Solutions
-![Progressive Access Logo](../resources/logos/logo2-small.png)
+![Progressive Access Logo](./resources/logos/logo2-small.png)
 [progacc.com](https://progressiveaccess.com)
 :::
 
