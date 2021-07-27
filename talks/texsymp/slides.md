@@ -64,9 +64,6 @@ Progressive Accessiblity Solutions
 * Speech solution for: ChromeVox, MathJax, EquatIO, MathLive, ...
 * Runs in browser, command line, as node module.
 
-* Enrich Math using [Speech Rule Engine](https://speechruleengine.org){target="_blank"}
-* 
-
 
 ## Example: Interactivity and Screenreading
 
@@ -83,17 +80,23 @@ $$
 :::
 
 
-## Semantics
+## Enriching the Representation
 
 * Accessibility requires one or multiple alternative views
 * Math markup (e.g., LaTeX, MathML) are not very expressive
 * SRE generates Semantics annotations automatically
+* SRE reinterprets the syntax
+* Fully disassembles the symbol structure
+* Reassembles a semantic intepretation bottom-up
+* Applies a number of (partially selectable) heuristics
 
 
+## Embedding Semantics
+
+Rewrite 
 ```LaTeX
     ax^2+bx+c=0
 ```
-
 ```html
 <math>
   <mi>a</mi>
@@ -109,19 +112,6 @@ $$
   <mo>=</mo>
   <mn>0</mn>
 </math>
-```
-
-## Embedding Semantics
-
-* SRE reinterprets the syntax
-* Fully disassembles the symbol structure
-* Reassembles a semantic intepretation bottom-up
-* Applies a number of (partially selectable) heuristics
-* Rewrite 
-```html
-<math><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup>
-  <mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi>
-  <mo>=</mo><mn>0</mn></math>
 ```
 internally into [semantically improved term structure](https://zorkow.github.io/semantic-tree-visualiser/visualise.html?310000111100%3Cmath%3E%0A%20%20%3Cmi%3Ea%3C/mi%3E%0A%20%20%3Cmsup%3E%0A%20%20%20%20%3Cmi%3Ex%3C/mi%3E%0A%20%20%20%20%3Cmn%3E2%3C/mn%3E%0A%20%20%3C/msup%3E%0A%20%20%3Cmo%3E+%3C/mo%3E%0A%20%20%3Cmi%3Eb%3C/mi%3E%0A%20%20%3Cmi%3Ex%3C/mi%3E%0A%20%20%3Cmo%3E+%3C/mo%3E%0A%20%20%3Cmi%3Ec%3C/mi%3E%0A%20%20%3Cmo%3E%3D%3C/mo%3E%0A%20%20%3Cmn%3E0%3C/mn%3E%0A%3C/math%3E)
 
