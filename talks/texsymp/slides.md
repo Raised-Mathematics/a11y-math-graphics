@@ -1,6 +1,6 @@
 ***Head
 
-:::Icon logos/favicon.ico
+:::Icon ./resources/logos/favicon.ico
 :::CSS ./node_modules/normalize.css/normalize.css minify
 :::CSS ./resources/styles.css minify
 :::Script ./resources/scripts/mathjax-conf.js minify
@@ -42,7 +42,7 @@ Progressive Accessiblity Solutions
 
 :::Affiliation
 Indian Instiute of Technology, Delhi
-![IITD Logo](./resources/logos/iit-delhi-logo.png)
+![IITD Logo](./resources/logos/iitd-logo-small.png)
 [iitd.ac.in](https://iitd.ac.in)
 :::
 
