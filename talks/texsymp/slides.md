@@ -1,6 +1,6 @@
 ***Head
 
-:::Icon logos/favicon.ico
+:::Icon ./resources/logos/favicon.ico
 :::CSS ./node_modules/normalize.css/normalize.css minify
 :::CSS ./resources/styles.css minify
 :::Script ./resources/scripts/mathjax-conf.js minify
@@ -40,11 +40,17 @@ Progressive Accessiblity Solutions
 [progacc.com](https://progressiveaccess.com)
 :::
 
+:::Affiliation
+Indian Instiute of Technology, Delhi
+![IITD Logo](./resources/logos/iitd-logo-small.png)
+[iitd.ac.in](https://iitd.ac.in)
+:::
+
 
 *******************
 
 
-## What is MathJax 
+## MathJax
 
 * [MathJax](https://mathjax.org) is a JavaScript library for rendering Mathematics in all browsers
 * **MathJax IS NOT MathML!** Takes LaTeX, AsciiMath, MathML
