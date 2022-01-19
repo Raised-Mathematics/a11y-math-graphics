@@ -1,0 +1,65 @@
+Title: Automated Generation of Tactile Mathematics
+
+
+-----------------------------------------------------------
+Length: 1h
+
+-----------------------------------------------------------
+Type: Lecture
+
+-----------------------------------------------------------
+Presentation Summary:
+
+We present a workflow for the generation of tactile mathematical content from
+commonly used mathematical markup. The workflow exclusively employs freely
+available open source tools and results in embossable output that is a
+combination of literary Braille and Nemeth Code together with diagrams set as
+tactile graphics.
+
+-----------------------------------------------------------
+Presentation Abstract:
+
+The generation of mathematical content in tactile form is a time consuming and
+often expensive process. We will present a workflow for the automated
+transcription of mathematical textbooks and course material into tactile
+formats.  The workflow is based on a combination of open source tools and
+facilitates translation of common math markup into literary Braille and Nemeth
+Code. In particular, its input is based on PreTeXt, a highly structured XML
+markup containing mathematical formulas in LaTeX, which is commonly used for
+open education resources in mathematics. To generate tactile output we employ
+LibLouis for literary Braille together with MathJax and Speech Rule Engine for
+translating formulas to Nemeth.  While the result can be sent directly to an
+embosser, we also provide support for proof reading and correction of the Nemeth
+output as well as techniques to automatically turn mathematical diagrams into
+tactile graphics.
+
+-----------------------------------------------------------
+
+Key Point 1 *: Automated generation of tactile teaching material in mathematics can reduce your workload
+Key Point 2 *: The high quality transcription of LaTeX Math to Nemeth Braille is a key factor
+Key Point 3 *: Creation of tactile mathematical graphics can be supported and automated
+
+-----------------------------------------------------------
+
+Disability Areas: Vision
+
+-----------------------------------------------------------
+
+Topics:
+Accessible Educational Materials
+Alternate Format
+Research
+
+
+-----------------------------------------------------------
+
+Volker is Professor in Document Analysis and Accessibility at the University of
+Birmingham, UK and Adjunct Faculty at IIT Delhi, India. He is working primarily
+on diagram recognition, mathematical document analysis and handwriting
+recognition. Practical applications of his research include STEM accessibility
+with a particular focus on Web technologies and eBooks.  He has been working as
+a Visiting Scientist with Google on math integration into ChromeVox. He is a
+member of the MathJax consortium responsible for the integration of accessible
+rendering of mathematical formulas on the web. And with his company Progressive
+Accessibility Solutions, he concentrates on accessibility technology that
+exploits image analysis to generate accessible STEM diagrams.
