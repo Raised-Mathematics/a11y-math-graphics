@@ -158,5 +158,14 @@ Other Formats:{.left}
 
 ## Conclusions
 
+* LaTeX to "Accessible" is (somewhat) easy
+* **At least for the Math**
+* One rich internal format can yield many 
+* Speech, tactile, interaction, etc.
 
-* **Do not consider this a PDF Accessibility Problem only!**
+But always consider the following:
+
+* No one will ever "author semantics"
+* Automatic interpretation is very important
+* **Do not throw away original LaTeX code**
+* It is so much more informative than alternatives (e.g., MathML)

@@ -60,30 +60,21 @@ Indian Instiute of Technology, Delhi
 * And getting worse for research papers, etc.
 
 
-## Creating Tactile Hardcopies
-
-Translate textbooks automatically into Braille from source
-
-Overview of the workflow
-
-* Sources in PreTeXt
-* Text into literary Braille with LibLouis
-* Math into Nemeth with MathJax and Speech Rule Engine
-* Graphics into tactile graphics via a multistep pipeline
-
-
 ## Overview
 
-* 
-* 
-* 
+* Math document formats and their accessibility
+  * PreTeXt and its accessibilty
+* Accessible Math with MathJax/SRE
+* Creating Tactile Hardcopies
+  * From PreTeXt to Tactile
+  * Nemeth with MathJax and Speech Rule Engine
 * A word on graphics with screen reading
 
 
 ## Document formats with math support
 
 * LaTeX: to [CTAN](https://www.ctan.org/) and beyond!
-* Microsoft Word: OOXML, "UnicodeMath", LaTeX (limited, import only)
+* Microsoft Word: OOXML, "UnicodeMath", LaTeX (limited, input only)
 * Libre Writer: [ODT Math](https://help.libreoffice.org/7.0/en-US/text/smath/main0000.html?DbPAR=MATH), [custom ascii](https://help.libreoffice.org/7.0/en-US/text/smath/01/03090900.html?&DbPAR=MATH&System=WIN)
 * Apple Pages: [blahtex, mathml](https://support.apple.com/en-us/HT202501)
 * lightweight markup: Markdown (varying, by implementations/extensions), [asciidoc](https://asciidoctor.org/docs/what-is-asciidoc/) ([asciimath](http://asciimath.org/)), [wikitext](https://en.wikipedia.org/wiki/Help:Wikitext) ([TeX-like](https://en.wikipedia.org/wiki/Help:Displaying_a_formula))
@@ -93,12 +84,12 @@ Overview of the workflow
 * Word formats
   * Raw: Pretty good accessibility in editor, Math depends on
     implementation/screen reader/formula editor!
-  * As PDF: Good structural accessible, but no math
+  * As PDF: Good structural accessibility, but no math
 * LaTeX needs to be compiled into PDF
   * Although LaTeX provides great structure that is lost in PDF
   * Math should be good but is lost too!
 * Markup like Markdown/ HTML
-  * Good structure accessibility
+  * Good structural accessibility
   * Math is accessible if handled right
 
 Best option is often to move content to the web
@@ -116,7 +107,7 @@ Best option is often to move content to the web
   * [pdf2htmlex](https://github.com/pdf2htmlEX/pdf2htmlEX)
   * [PDF.js](https://mozilla.github.io/pdf.js/)
 
-Keep as much of the source as possible
+Keep as much of the source as possible: **do not replace the LaTeX**
 
 ## Why is LaTeX important
 
@@ -125,33 +116,50 @@ Keep as much of the source as possible
 * Can be used on the web (github, stackoverflow, etc.)
 * Every new Math editor ultimately allows LaTeX as input syntax
 * LaTeX for the visually impaired
-  * Trend in some European countries to teach LaTeX to VI from grade 1 (Germany, Slovenia, ...)
+  * Some European countries teach LaTeX to VI stduents from grade 1
   * Little additional effort to learn
   * Easy to communicate with non-specailist teachers and sighted peers
   * Translation of code to 8-dot LaTeX Braille
+
+
+## Creating Tactile Hardcopies
+
+Translate textbooks automatically into Braille from source
+
+* Little support in for most formats
+* LaTeX package do not produce quality results
+
+What do we do?
+
+* Sources in PreTeXt
+* Text into literary Braille with LibLouis
+* Math into Nemeth with MathJax and Speech Rule Engine
+* Graphics into tactile graphics via a multistep pipeline
 
 ## What is PreTeXt?
 
 [PreTeXt](https://pretextbook.org/) is a an uncomplicated XML vocabulary for
 open source textbooks, monographs, and research articles.
 
-Aims to bring together the good part of HTML/Word with LaTeX.
+**Aims to bring together the good parts of HTML/Word with LaTeX.**
 
 * Structure in XML
 * Mathematics in LaTeX
 * Graphics mainly in LaTeX
-* One source, many outputs:
-  * print, PDF, web, EPUB, Jupyter Notebooks, ...
 * [Over 100 individual projects](https://pretextbook.org/catalog.html): 
   * mainly Math, some CS and engineering
   * one music theory, one university writing handbook
 
 **In our context:**{style="color:red"} provides free and well curated content
 
-## Math in PreTeXt and its Accessibility
+## PreTeXt and Accessibility
 
-* 
-* 
+* One source, many outputs:
+  * print, PDF, web, EPUB, Jupyter Notebooks, ...
+* HTML output is accessible
+  * Mathematics is in LaTeX
+  * Rendered with MathJax
+  * Made accessible using Speech Rule Engine
 
 ## What is MathJax?
 
@@ -167,13 +175,27 @@ Aims to bring together the good part of HTML/Word with LaTeX.
 
 ## Speech Rule Engine
 
-* Javascript library for translating Math into Speech [available at github](github.com/zorkow/speech-rule-engine)
+* Javascript library for translating Math into Speech [available at github](https://github.com/zorkow/speech-rule-engine)
 * Only Math speech solution in JavaScript: Runs in browser, command line, as node module.
-* Speech solution for: ChromeVox, MathJax, EquatIO, MathLive, \ldots
+* Speech solution for: ChromeVox, MathJax, EquatIO, MathLive, ...
 * Based on semantic interpretations via pattern matching techniques
     * Ignores any poor syntax (or at least tries to)
     * Math markup (e.g., LaTeX, MathML) are not very expressive, sometimes bloated
 
+
+## SRE in MathJax
+
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$
+
+* SRE is pulled into MathJax
+* Speech (or Braille) with 
+  * multiple reading rules and preference, 
+  * different languages
+  * [Play Area for speech](https://mathjax.github.io/MathJax-demos-web/speech-generator/convert-with-speech.html)
+* Interactive Exploration
+  * Highlighting, magnification, etc.
+* All this is done using a semantic interpretation
+  
 
 ## Generate Semantics
 
@@ -200,6 +222,14 @@ Aims to bring together the good part of HTML/Word with LaTeX.
   <mn>0</mn>
 </math>
 ```
+
+## Generate Speech
+
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$
+
+* Math voiced via a screen reader
+* [Autovoicing](http://127.0.0.1:8081/v3-lab.html?T00FF/TFFTF/011/FFF01131T/0/0001100000000000000000000000000000000/00000000000000000000000000000001000000//TTFFFTF/x%20%3D%20%7B-b%20%5Cpm%20%5Csqrt%7Bb%5E2-4ac%7D%20%5Cover%202a%7D)
+
 
 ## Nemeth in SRE
 
@@ -257,7 +287,7 @@ Nemeth is challenging to get right automatically, but sometimes automation is be
 * Subtlety of spaces:
    * $44\,352\,000$ is a single number and transcribes as ⠼⠲⠲⠒⠢⠆⠴⠴⠴ 
    * $(0110\,1110\,0110)$ is not a single number but a vector, hence ⠷⠼⠴⠂⠂⠴⠀⠼⠂⠂⠂⠴⠀⠼⠴⠂⠂⠴⠾
-   * $(n, E) = (451{,}231)$ [The right hand side is not a single number](http://abstract.ups.edu/aata/exercises-crypt.html#grE) ⠷⠝⠠⠀⠠⠑⠾⠀⠨⠅⠀⠷⠲⠢⠂⠠⠀⠆⠒⠂⠾
+   * $(n, E) = (451{,}231)$ [The right hand side is not a single number](http://abstract.ups.edu/aata/exercises-crypt.html#RZE) ⠷⠝⠠⠀⠠⠑⠾⠀⠨⠅⠀⠷⠲⠢⠂⠠⠀⠆⠒⠂⠾
 * Context helps
     $$PAP^{-1} = B$$
     [is not an abbreviation](http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#mDC): ⠠⠏⠠⠁⠠⠏⠘⠤⠂⠀⠨⠅⠀⠠⠃
@@ -299,55 +329,21 @@ Nemeth is challenging to get right automatically, but sometimes automation is be
 * Many Standard techniques do not work
 
 [Some examples from Abstract Algebra](http://abstract.ups.edu/aata/aata.html)
-* [Fairly easy relations](http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Ilt)
-* [Large graphics with interspersed math](http://abstract.ups.edu/aata/section-mod-n-sym.html#lqf)
-* [Lattices](http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#TrF), [Category theory](http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#QwZ), etc.
+* [Roots of Unity](http://abstract.ups.edu/aata/cyclic-section-mult-group-c.html#ihV)
+* [Fairly easy relations](http://abstract.ups.edu/aata/ssets-ection-sets-and-equivalence-relations.html#Ilt)
+* [Large graphics with interspersed math](http://abstract.ups.edu/aata/groups-section-mod-n-sym.html#lqf)
+* [Lattices](http://abstract.ups.edu/aata/galois-section-fund-theorem-galois-theory.html#nkw), [Category theory](http://abstract.ups.edu/aata/galois-section-fund-theorem-galois-theory.html#QwZ), etc.
 
 
 
 ## Processing Labels
 
 * Easy: Separate Text vs Math
-  * PreTeXt already does the for us: Text vs LaTeX
+  * PreTeXt already does this for us: Text vs LaTeX
   * Translate Text with Liblouis
   * Translate Math with SRE 
-* Hard: Fitting labels into graphic
-  * Braille uses different space than text
-  * Labels are measured
-  * Bounding boxes are created and aligned
-
-
-## Example: Latex to Tactile
-
-Source: [Tom Judson, Abstract Algebra: Theory and Application](http://abstract.ups.edu/sage-aata.html)
-{.source}
-
-![Cyclic Roots of Unity.](Resources/pretext/cyclic-roots-unity.svg)
-{align="center"}
-
-
-## Workflow Example
-
-* Creating Braille bounding boxes in the diagram
-
-![Unit circle with Braille bounding boxes](Resources/pretext/roots-of-unity-boxes.svg)
-{align="center"}
-
-
-## Workflow Example
-
-* Fitting ASCII Braille into bounding boxes
-
-![Unit circle with Ascii Braille](Resources/pretext/roots-of-unity-brf.svg)
-{align="center"}
-
-
-## Workflow Example
-
-* Full rendering in Unicode Braille Font
-
-![Unit circle with Ascii Braille](Resources/pretext/roots-of-unity-braille.svg)
-{align="center"}
+* Hard: Fitting tactile labels into graphic
+* Hard: Understanding graphical content
 
 
 ## Diagrams for Screenreading
@@ -362,31 +358,6 @@ Source: [Tom Judson, Abstract Algebra: Theory and Application](http://abstract.u
 :::
 
 
-## Talking to the Embosser
-
-* The entire image is measured and scaled as much as possible to fit onto a page
-* Good-looking image on the screen frequently does not look good embossed
-* Result is usually suboptimal
-    * Scaling of graphics should not apply to Braille
-    * Embosser do not work well with SVG
-* Conversion to PDF necessary
-* Fonts need to be explicitly un-embedded
-
-
-## Example: Poorly embossed
-
-![Diagram bad for embosser](Resources/alexei/diagram_bad.jpg){width=700}
-{align="center"}
-
-* Diagram in PDF with fonts
-
-## Example: Legibly embossed
-
-![Diagram bad for embosser](Resources/alexei/diagram_better.jpg){width=700}
-{align="center"}
-
-* Unembedded fonts
-
 ## Tomorrow: How to Emboss Graphics
 
 ![Diagram good for embosser](Resources/alexei/diagram_best.jpg){width=700}
@@ -395,6 +366,14 @@ Source: [Tom Judson, Abstract Algebra: Theory and Application](http://abstract.u
 
 ## Some Conclusions
 
-* MathJax v4
-* 8-dot Braille
-* Definitely 8-dot LaTeX Braille
+* Making Math accessible on the web is quite straightforward
+  * Make sure to work from sources
+  * Do not replace LaTeX with MathML!
+* MathJax v4 is about to be released
+* Currently Nemeth Braille:
+  * Adding other variants, e.g. UEB
+  * Definitely 8-dot LaTeX Braille
+* Missing parts: 
+    * Intelligent Linebreaking
+    * Form factors and Reflow
+* Diagrams are really exciting... **More tomorrow!**
